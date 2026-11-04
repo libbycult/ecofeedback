@@ -14,6 +14,8 @@ from scipy.integrate import cumulative_trapezoid
 from ParamsECO1 import *
 from Functionsdiurnal1 import * 
 
+
+#for main jupyter notebook, edit this for the day length!
 length =  60 #days (length of simulation)
 dt     = .01 #time step
 
