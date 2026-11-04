@@ -29,7 +29,7 @@ jupyter lab
 ```
 
 - `PrecipGraph.ipynb` runs from the scripts alone.
-- `Figures6and7_Forest_Grass.ipynb` plots saved simulation output (`matrixlargeplantbase.npz`, `matrixsmallplant37.npz`, containing `ss`, `ssCAC` and `CAC`) and does not rerun the simulations. These files are not yet included in this repository.
+- `Figures6and7_Forest_Grass.ipynb` plots saved simulation output (`forest.npz`, `grass.npz`, containing `ss`, `ssCAC` and `CAC`) and does not rerun the simulations. These files are not yet included in this repository.
 
 ## Citation
 
