@@ -4,7 +4,7 @@ import ParamsECO1
 reload(ParamsECO1)
 from ParamsECO1 import *
 
-#NO REVIEW OF FOLLOWING CODE 
+
 def ET_L(ss_in,b,sh,Ks,emax):
     
     if (sh < ss_in < 1):
@@ -15,25 +15,25 @@ def ET_L(ss_in,b,sh,Ks,emax):
         
         return Ks*(ss_in)**(2*b+3)
         
-#NO REVIEW OF FOLLOWING CODE    
+
 def Ks_func(ss_in,Ksm,b):
 
     return Ksm*(ss_in**(2*b+3))
 
-#NO REVIEW OF FOLLOWING CODE 
+
 def gp(psi_l,psi_50): #vulnerability curve
     #changed to 4
     return gp_max/(1+((psi_l/psi_50)**4))
 
 
-#NO REVIEW OF FOLLOWING CODE 
+
 def gs(ss_in,Zrm,Ksm,b): #soil conductance, conversion from days to seconds, and Pa to MPa
         
         #final units are m/(MPa*s)
         
     return ((Ks_func(ss_in,Ksm,b))*np.sqrt(RAI*ss_in**(-8)))/((np.pi*g*rho_w*Zrm)*1*10**-6)
 
-#NO REVIEW OF FOLLOWING CODE 
+
 def ET_NL(ss_in,sh,emax):
     
     if (sh < ss_in < 1):
@@ -44,16 +44,16 @@ def ET_NL(ss_in,sh,emax):
         
         return 0 
 
-#NO REVIEW OF FOLLOWING CODE 
 def gsrp(ss_in,psi_l,Zrm,psi_50,Ksm,b): 
     
     return (gs(ss_in,Zrm,Ksm,b)*gp(psi_l,psi_50)/f*LAI)/((gs(ss_in,Zrm,Ksm,b)+LAI*gp(psi_l,psi_50)/f))
 
-#NO REVIEW OF FOLLOWING CODE 
+
 def gw(ws_in,ss_in): #water storage conductance
     
     return 0#gw_max*(ws_in)**4
-#NO REVIEW OF FOLLOWING CODE 
+
+
 def gstom(psi_l,psi_min,gst_max): #stomatal conductance function
  
     if (psi_min <= psi_l <= -0.07):
@@ -67,7 +67,7 @@ def gstom(psi_l,psi_min,gst_max): #stomatal conductance function
         
         return 0 
              
- #NO REVIEW OF FOLLOWING CODE       
+     
 def fD(Ta,Dx,qa):
             
     return 1/(1+VPD(Ta,qa)/Dx)
@@ -80,7 +80,7 @@ def fPAR(phi):
     
     return 1 - np.exp(-0.005*phi)
     
-#NO REVIEW OF FOLLOWING CODE 
+
 #Potentials (MPa)
 
 def psi_w(ws_in,Tl): #storage potential
@@ -90,7 +90,7 @@ def psi_w(ws_in,Tl): #storage potential
             
     return psi #osmotic + turgor
     
-#NO REVIEW OF FOLLOWING CODE 
+
 def psi_s(ss_in,b,psi_s0): #soil
     
     if ss_in !=0: 
@@ -163,7 +163,7 @@ def psimin(psi_50):
 
 
 
-#Do review this code 
+
 def gmax(psi_50):
     stom_50 = ((psimin(psi_50)-.07)/(2)) #50 percent loss of conductance - the gmax portion 
 
