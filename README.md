@@ -2,7 +2,7 @@
 
 Code and figure notebooks for:
 
-> L. Cultra et al., **Ecohydrological Controls on Moist Convection and Long-Term Rainfall Feedback**, arXiv:2604.08442 (2026).
+> E. Cultra et al., **Ecohydrological Controls on Moist Convection and Long-Term Rainfall Feedback**, arXiv:2604.08442 (2026).
 
 ## Files
 
